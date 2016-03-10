@@ -1,0 +1,50 @@
+digraph G {
+	node [shape=box];
+	"MWBList" -> {};
+	"MWBListUserInterface" -> {};
+	"MWBListModuleInterface" -> {};
+	"MWBListViewController" -> "MWBListModuleInterface";
+	"MWBListViewController" -> "MWBWebDataStore";
+	"MWBListViewController" -> "MWBListUserInterface";
+	"MWBListViewController" -> "MWBList";
+	"MWBDataStoreManager" -> {};
+	"MWBSectionViewItem" -> {};
+	"MWBCellElementCollectionViewCell" -> {};
+	"MWBListInteractor" -> "MWBListDataManager";
+	"MWBListInteractor" -> "MWBListInteractorIO";
+	"MWBWebDataStore" -> "MWBConstants";
+	"MWBWebDataStore" -> "MWBList";
+	"MWBBrochure" -> {};
+	"BrochuresUITests" -> {};
+	"MWBSectorNetworkItem" -> "MWBBrochureNetworkItem";
+	"MWBDataContainer" -> {};
+	"main" -> "AppDelegate";
+	"MWBRootWireFrame" -> {};
+	"MWBListDataManager" -> "MWBWebDataStore";
+	"MWBSector" -> "MWBBrochure";
+	"MWBListNetworkItem" -> "MWBSectorNetworkItem";
+	"BrochuresTests" -> {};
+	"AppDelegate" -> "MWBListDataManager";
+	"AppDelegate" -> "MWBListInteractor";
+	"AppDelegate" -> "MWBWebDataStore";
+	"AppDelegate" -> "MWBListPresenter";
+	"AppDelegate" -> "MWBRootWireFrame";
+	"AppDelegate" -> "MWBListWireFrame";
+	"MWBBrochureNetworkItem" -> {};
+	"MWBBrochureViewItem" -> {};
+	"MWBConstants" -> {};
+	"MWBListInteractorIO" -> {};
+	"MWBDisplayableSectorsContainer" -> {};
+	"MWBListSection" -> {};
+	"MWBListPresenter" -> "MWBDisplayableSectorsContainer";
+	"MWBListPresenter" -> "MWBListModuleInterface";
+	"MWBListPresenter" -> "MWBListUserInterface";
+	"MWBListPresenter" -> "MWBListInteractorIO";
+	"MWBListWireFrame" -> "MWBListViewController";
+	"MWBListWireFrame" -> "MWBRootWireFrame";
+	
+	
+	edge [color=blue, dir=both];
+	"MWBListPresenter" -> "MWBListWireFrame";
+}
+
